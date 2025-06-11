@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 const Header = () => {
   const [isToggled, setIsToggled] = useState(false);
-  const CN = isToggled ? "" : "";
   useEffect(() => {
     const body = document.querySelector("body");
     isToggled
