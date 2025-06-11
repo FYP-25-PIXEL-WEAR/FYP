@@ -24,7 +24,7 @@ const Header = () => {
             <>
               <button
                 className={
-                  "tw:w-30 tw:h-15 d-flex tw:bg-[#D9D9D9] tw:border-0 rounded-5 tw-p-0 tw-gap-2 p-3 align-items-center justify-content-end"
+                  "tw:w-30 tw:h-15 d-flex tw:bg-[#000] tw:border-0 rounded-5 tw-p-0 tw-gap-2 p-3 align-items-center justify-content-end"
                 }
                 onClick={() => setIsToggled(!isToggled)}
               >
