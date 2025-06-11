@@ -1,8 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Header = () => {
   const [isToggled, setIsToggled] = useState(false);
   const CN = isToggled ? "" : "";
+  useEffect(() => {
+    const body = document.querySelector("body");
+    if (isToggled) {
+      body.classList.add("dark-mode");
+    } else {
+      body.classList.remove("dark-mode");
+    }
+  }, [isToggled]);
   return (
     <div className="container-fluid tw:bg-[#FFDDA9] p-2 d-flex">
       <div className="img d-grid justify-content-center align-items-center">

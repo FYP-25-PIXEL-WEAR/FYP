@@ -25,32 +25,10 @@ input:focus{
   transform: scale(1.1);
   transition: all 0.5s ease-in-out;
 }
-/* #switch{
-  visibility: hidden;
-  position: relative;
+*{
+  transition: all 0.5s ease-in-out;
 }
-#switch::before{
-  content:"";
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(-100%, -50%);
-  width: 100px;
-  height: 50px;
-  z-index: 999;
-  border-radius: 250px;
-  background-color: #D9D9D9;
-  visibility: visible;
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
 }
-#switch::after{
-  content:"";
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(-100%, -50%);
-  width: 50px;
-  height: 50px;
-  z-index: 999;
-  border-radius: 250px;
-  visibility: visible;
-} */
