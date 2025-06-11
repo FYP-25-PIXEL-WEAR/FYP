@@ -19,11 +19,9 @@ body {
 form,#square{
   font-family: "Domine", serif;
   font-style: normal;
-  transition: all 0.5s ease-in-out;
 }
 input:focus{
   transform: scale(1.1);
-  transition: all 0.5s ease-in-out;
 }
 *{
   transition: all 0.5s ease-in-out;
