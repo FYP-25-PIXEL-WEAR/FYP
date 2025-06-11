@@ -5,16 +5,16 @@ const Header = () => {
   const CN = isToggled ? "":""
   return (
     <div className='container-fluid tw:bg-[#FFDDA9] p-3 d-flex'>
-      <div className="img">
-        <div className="img-rounded tw:bg-[#D9D9D9] rounded-circle d-grid justify-content-start align-items-center tw:max-w-max">
+      <div className="img d-grid justify-content-center align-items-center">
+        <div className="img-rounded tw:bg-[#D9D9D9] rounded-circle d-grid justify-content-center align-content-center tw:max-w-max m-auto">
           <img
             src="https://i.ibb.co/2t1f3bH/Logo.png"
             alt="Logo"
-            className="rounded-circle"
+            className="rounded-circle img-fluid"
             style={{ width: '75px', height: '75px' }}
           />
-          <p>First ever AI Integrated Shopping Store</p>
         </div>
+          <p className='tw:text-[10px]'>First ever AI Integrated Shopping Store</p>
       </div>
       <div className="switch d-grid justify-content-end align-items-center ms-auto">
         <div className="button">
