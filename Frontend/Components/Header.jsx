@@ -13,6 +13,7 @@ const Header = () => {
             className="rounded-circle"
             style={{ width: '75px', height: '75px' }}
           />
+          <p>First ever AI Integrated Shopping Store</p>
         </div>
       </div>
       <div className="switch d-grid justify-content-end align-items-center ms-auto">
