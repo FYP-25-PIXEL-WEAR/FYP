@@ -1,10 +1,10 @@
 import {useState,useEffect} from 'react'
-import LoginSignUp from '/Components/LoginSignUp'
-import Navbar from '/Components/Navbar'
+import LoginSignUp from './Components/LoginSignUp'
+import Navbar from './Components/Navbar'
 import {BrowserRouter, Route,Routes} from 'react-router-dom'
-import Home from '/Components/Home'
-import Header from '../Components/Header'
-import Footer from '../Components/Footer'
+import Home from './Components/Home'
+import Header from './Components/Header'
+import Footer from './Components/Footer'
 import './App.css'
 const App = () => {
   const [showNavbar, setShowNavbar] = useState(true)

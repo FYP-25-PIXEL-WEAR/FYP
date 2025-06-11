@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-
+import { GoPerson } from "react-icons/go";
+import { MdOutlineShoppingCart } from "react-icons/md";
+import { CiSearch } from "react-icons/ci";
 const Header = ({isToggled,setIsToggled}) => {
   
   return (
@@ -13,9 +15,14 @@ const Header = ({isToggled,setIsToggled}) => {
             style={{ width: "75px", height: "75px" }}
           />
         </div>
-        <p className="tw:text-[10px]">
+        <p className="tw:text-[10px] text-center">
           First ever AI Integrated Shopping Store
         </p>
+      </div>
+      <div className="icons d-flex justify-content-end tw:w-[85%] p-2 align-items-center gap-3">
+        <GoPerson className="tw:bg-[#D9D9D9] rounded-circle tw:w-[2.5rem] tw:h-[2.5rem] p-2 tw:cursor-pointer"/>
+        <MdOutlineShoppingCart className="tw:bg-[#D9D9D9] rounded-circle tw:w-[2.5rem] tw:h-[2.5rem] p-2 tw:cursor-pointer"/>
+        <CiSearch className="tw:bg-[#D9D9D9] rounded-circle tw:w-[2.5rem] tw:h-[2.5rem] p-2 tw:cursor-pointer"/>
       </div>
       <div className="switch d-grid justify-content-end align-items-center ms-auto">
         <div className="button">
@@ -23,11 +30,11 @@ const Header = ({isToggled,setIsToggled}) => {
             <>
               <button
                 className={
-                  "tw:w-30 tw:h-15 d-flex tw:bg-[#000] tw:border-0 rounded-5 tw-p-0 tw-gap-2 p-3 align-items-center justify-content-end"
+                  "tw:w-30 tw:h-15 d-flex tw:bg-[#D9D9D9] tw:border-0 rounded-5 tw-p-0 tw-gap-2 p-3 align-items-center justify-content-end"
                 }
                 onClick={() => setIsToggled(!isToggled)}
               >
-                <span className="tw:w-10 rounded-circle tw:h-10 tw:bg-[#ffffff]"></span>
+                <span className="tw:w-10 rounded-circle tw:h-10 tw:bg-[#000]"></span>
               </button>
             </>
           ) : (
@@ -38,7 +45,7 @@ const Header = ({isToggled,setIsToggled}) => {
                 }
                 onClick={() => setIsToggled(!isToggled)}
               >
-                <span className="tw:w-10 rounded-circle tw:h-10 tw:bg-[#ffffff]"></span>
+                <span className="tw:w-10 rounded-circle tw:h-10 tw:bg-[#000]"></span>
               </button>
             </>
           )}
