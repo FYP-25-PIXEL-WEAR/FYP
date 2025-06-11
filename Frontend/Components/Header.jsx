@@ -4,7 +4,7 @@ const Header = () => {
   const [isToggled, setIsToggled] = useState(false)
   const CN = isToggled ? "":""
   return (
-    <div className='container-fluid tw:bg-[#FFDDA9] p-3 d-flex'>
+    <div className='container-fluid tw:bg-[#FFDDA9] p-2 d-flex'>
       <div className="img d-grid justify-content-center align-items-center">
         <div className="img-rounded tw:bg-[#D9D9D9] rounded-circle d-grid justify-content-center align-content-center tw:max-w-max m-auto">
           <img
