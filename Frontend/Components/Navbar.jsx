@@ -2,8 +2,8 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="container-fluid">
-      <nav className="navbar navbar-expand-lg bg-body-white">
+    <div>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <button
             className="navbar-toggler"

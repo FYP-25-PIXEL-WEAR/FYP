@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import LoginSignUp from '/Components/LoginSignUp'
 import Navbar from '/Components/Navbar'
 import {BrowserRouter, Route,Routes} from 'react-router-dom'
@@ -10,11 +10,18 @@ const App = () => {
   const [showNavbar, setShowNavbar] = useState(true)
   const [showHeader, setShowHeader] = useState(true)
   const [showFooter, setShowFooter] = useState(true)
+  const [isToggled, setIsToggled] = useState(false);
+  useEffect(() => {
+    const body = document.querySelector("body");
+    isToggled
+      ? body.setAttribute("class","bg-dark text-white")
+      : body.removeAttribute("class");
+  }, [isToggled]);
 
   return (
     <div>
       <BrowserRouter>
-      {showHeader && <Header />}
+      {showHeader && <Header isToggled={isToggled} setIsToggled={setIsToggled}/>}
       {showNavbar && <Navbar />}
       <Routes basename="/app">
         <Route path="/" element={<LoginSignUp setShowNavbar={setShowNavbar} setShowHeader={setShowHeader} setShowFooter={setShowFooter} />} />

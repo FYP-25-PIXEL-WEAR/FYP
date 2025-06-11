@@ -1,13 +1,7 @@
 import { useEffect, useState } from "react";
 
-const Header = () => {
-  const [isToggled, setIsToggled] = useState(false);
-  useEffect(() => {
-    const body = document.querySelector("body");
-    isToggled
-      ? body.classList.add("dark-mode")
-      : body.classList.remove("dark-mode");
-  }, [isToggled]);
+const Header = ({isToggled,setIsToggled}) => {
+  
   return (
     <div className="container-fluid tw:bg-[#FFDDA9] p-2 d-flex">
       <div className="img d-grid justify-content-center align-items-center">
