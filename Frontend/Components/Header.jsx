@@ -5,11 +5,9 @@ const Header = () => {
   const CN = isToggled ? "" : "";
   useEffect(() => {
     const body = document.querySelector("body");
-    if (isToggled) {
-      body.classList.add("dark-mode");
-    } else {
-      body.classList.remove("dark-mode");
-    }
+    isToggled
+      ? body.classList.add("dark-mode")
+      : body.classList.remove("dark-mode");
   }, [isToggled]);
   return (
     <div className="container-fluid tw:bg-[#FFDDA9] p-2 d-flex">
