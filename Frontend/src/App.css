@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Domine:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+h1,
+h2.h3,
+h4,
+h5,
+h6 {
+  font-family: "Bebas Neue", sans-serif;
+  font-style: normal;
+}
+body {
+  font-family: "Bebas Neue", sans-serif;
+  font-style: normal;
+}
+.nav-item{
+    padding: 0 20px;
+}
+form,#square{
+  font-family: "Domine", serif;
+  font-style: normal;
+  transition: all 0.5s ease-in-out;
+}
+input:focus{
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+/* #switch{
+  visibility: hidden;
+  position: relative;
+}
+#switch::before{
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-100%, -50%);
+  width: 100px;
+  height: 50px;
+  z-index: 999;
+  border-radius: 250px;
+  background-color: #D9D9D9;
+  visibility: visible;
+}
+#switch::after{
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-100%, -50%);
+  width: 50px;
+  height: 50px;
+  z-index: 999;
+  border-radius: 250px;
+  visibility: visible;
+} */
