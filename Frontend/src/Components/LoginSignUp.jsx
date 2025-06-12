@@ -48,7 +48,7 @@ const LoginSignUp = ({ setShowNavbar,setShowHeader,setShowFooter }) => {
   };
 
   return (
-    <div className="container">
+    <div className="container d-flex justify-content-center align-items-center tw:mt-24">
       <div className="col-md-9 m-auto shadow-lg p-5 mt-5 rounded-3 tw:h-[500px] overflow-hidden tw:relative">
         <div className="position-relative d-flex flex-md-row justify-content-between align-items-center">
           {isTablet ? (
