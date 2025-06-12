@@ -5,6 +5,7 @@ import {BrowserRouter, Route,Routes} from 'react-router-dom'
 import Home from './Components/Home'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
+import UserProfile from './Components/UserProfile'
 import './App.css'
 const App = () => {
   const [showNavbar, setShowNavbar] = useState(true)
@@ -26,6 +27,7 @@ const App = () => {
       <Routes basename="/app">
         <Route path="/" element={<LoginSignUp setShowNavbar={setShowNavbar} setShowHeader={setShowHeader} setShowFooter={setShowFooter} />} />
         <Route path="/home" element={<Home setShowNavbar={setShowNavbar} setShowHeader={setShowHeader} setShowFooter={setShowFooter}/>} />
+        <Route path="/userprofile" element={<UserProfile />} />
         </Routes>
       {showFooter && <Footer />}
       </BrowserRouter>

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { GoPerson } from "react-icons/go";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
+import { Link } from "react-router-dom";
 const Header = ({isToggled,setIsToggled}) => {
   
   return (
@@ -20,7 +21,7 @@ const Header = ({isToggled,setIsToggled}) => {
         </p>
       </div>
       <div className="icons d-flex justify-content-end tw:w-[85%] p-2 align-items-center gap-3">
-        <GoPerson className="tw:bg-[#D9D9D9] rounded-circle tw:w-[2.5rem] tw:h-[2.5rem] p-2 tw:cursor-pointer"/>
+        <Link to={"/userprofile"} style={{ textDecoration:"none" }}><GoPerson className="tw:bg-[#D9D9D9] rounded-circle tw:w-[2.5rem] tw:h-[2.5rem] p-2 tw:cursor-pointer"/></Link>
         <MdOutlineShoppingCart className="tw:bg-[#D9D9D9] rounded-circle tw:w-[2.5rem] tw:h-[2.5rem] p-2 tw:cursor-pointer"/>
         <CiSearch className="tw:bg-[#D9D9D9] rounded-circle tw:w-[2.5rem] tw:h-[2.5rem] p-2 tw:cursor-pointer"/>
       </div>
