@@ -130,6 +130,36 @@ const UserProfile = () => {
             </div>
           </div>
         </div>
+        <div className="recent-order bg-secondary-subtle p-3 m-auto mt-5 text-black">
+            <h1 className="h1">Recent Orders</h1>
+            <table className="table tw:overflow-x-auto">  
+                <thead className="tw:text-3xl">
+                    <tr>
+                        <th>Order No.</th>
+                        <th>Placed ON</th>
+                        <th>PRODUCT</th>
+                        <th>QUANTITY</th>
+                        <th>TOTAL</th>
+                    </tr>
+                </thead>
+                <tbody className="tw:text-2xl">
+                    <tr>
+                        <td>12345</td>
+                        <td>2023-10-01</td>
+                        <td>Product A</td>
+                        <td>2</td>
+                        <td>$50.00</td>
+                    </tr>
+                    <tr>
+                        <td>12346</td>
+                        <td>2023-10-02</td>
+                        <td>Product B</td>
+                        <td>1</td>
+                        <td>$30.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
       </div>
     </div>
   );
