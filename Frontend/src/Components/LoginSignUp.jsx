@@ -184,7 +184,7 @@ const LoginSignUp = ({ setShowNavbar,setShowHeader,setShowFooter }) => {
                     <div className="form-group mb-5 mt-5 position-relative">
                       <input
                         type="text"
-                        className="border-0 border-bottom tw:outline-0 position-relative"
+                        className="border-0 border-bottom tw:outline-0 position-relative data"
                         id="email"
                         placeholder="Username"
                         required
@@ -194,7 +194,7 @@ const LoginSignUp = ({ setShowNavbar,setShowHeader,setShowFooter }) => {
                     <div className="form-group mb-5 mt-5 position-relative">
                       <input
                         type="password"
-                        className="border-0 border-bottom tw:outline-0 position-relative"
+                        className="border-0 border-bottom tw:outline-0 position-relative data"
                         id="password"
                         placeholder="Password"
                         required
@@ -241,7 +241,7 @@ const LoginSignUp = ({ setShowNavbar,setShowHeader,setShowFooter }) => {
                     <div className="form-group mb-5 mt-5 position-relative">
                       <input
                         type="text"
-                        className="border-0 border-bottom tw:outline-0 position-relative"
+                        className="border-0 border-bottom tw:outline-0 position-relative data"
                         id="newUsername"
                         placeholder="New Username"
                         required
@@ -251,7 +251,7 @@ const LoginSignUp = ({ setShowNavbar,setShowHeader,setShowFooter }) => {
                     <div className="form-group mb-5 mt-5 position-relative">
                       <input
                         type="email"
-                        className="border-0 border-bottom tw:outline-0 position-relative"
+                        className="border-0 border-bottom tw:outline-0 position-relative data"
                         id="newEmail"
                         placeholder="Email"
                         required
@@ -261,7 +261,7 @@ const LoginSignUp = ({ setShowNavbar,setShowHeader,setShowFooter }) => {
                     <div className="form-group mb-5 mt-5 position-relative">
                       <input
                         type="password"
-                        className="border-top-0 border-0 border-bottom tw:outline-0 position-relative"
+                        className="border-top-0 border-0 border-bottom tw:outline-0 position-relative data"
                         id="newPassword"
                         placeholder="New Password"
                         required
