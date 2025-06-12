@@ -130,9 +130,9 @@ const UserProfile = () => {
             </div>
           </div>
         </div>
-        <div className="recent-order bg-secondary-subtle p-3 m-auto mt-5 text-black">
+        <div className="recent-order bg-secondary-subtle p-3 m-auto mt-5 text-black tw:overflow-x-auto">
             <h1 className="h1">Recent Orders</h1>
-            <table className="table tw:overflow-x-auto">  
+            <table className="table table-borderless">  
                 <thead className="tw:text-3xl">
                     <tr>
                         <th>Order No.</th>
