@@ -19,7 +19,7 @@ const App = () => {
   }, [isToggled]);
 
   return (
-    <div>
+    <>
       <BrowserRouter>
       {showHeader && <Header isToggled={isToggled} setIsToggled={setIsToggled}/>}
       {showNavbar && <Navbar />}
@@ -29,7 +29,7 @@ const App = () => {
         </Routes>
       {showFooter && <Footer />}
       </BrowserRouter>
-    </div>
+    </>
   )
 }
 
