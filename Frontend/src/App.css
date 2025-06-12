@@ -20,7 +20,7 @@ form,#square{
   font-family: "Domine", serif;
   font-style: normal;
 }
-input:focus{
+.data:focus{
   transform: scale(1.1);
 }
 *{

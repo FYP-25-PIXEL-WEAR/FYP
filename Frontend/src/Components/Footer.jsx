@@ -4,7 +4,7 @@ import { BsEnvelopeAt } from "react-icons/bs";
 const Footer = () => {
   return (
     <>
-    <footer className='tw:bg-[url("footer.png")] tw:bg-cover tw:bg-center tw:bg-no-repeat text-white tw:min-h-[700px] position-relative'>
+    <footer className='tw:bg-[url("footer.png")] tw:bg-cover tw:bg-center tw:bg-no-repeat text-white tw:min-h-[600px] w-100 tw:bottom-0'>
       <div className="container-fluid">
           <div className="col-md-4 ms-auto">
             <p className='text-end tw:text-4xl'>Worlds First ever AI Powered Store</p>
