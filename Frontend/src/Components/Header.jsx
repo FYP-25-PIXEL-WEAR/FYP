@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 const Header = ({isToggled,setIsToggled}) => {
   
   return (
-    <div className="container-fluid tw:bg-[#FFDDA9] p-2 d-flex text-black">
+    <header>
+    <div className="container-fluid tw:bg-[#FFDDA9] p-2 d-flex text-black tw:relative tw:xl:before:w-[50rem] tw:xl:before:h-[100rem] tw:xl:before:absolute tw:xl:before:rotate-[40deg] tw:xl:before:bg-[#FFDDA9] tw:xl:before:right-[-15%] tw:xl:before:z-[-1] tw:xl:before:top-[-50%] tw:xl:before:translate-y-[-55%] tw:xl:before:rounded-[40px]">
       <div className="img d-grid justify-content-center align-items-center">
         <div className="img-rounded tw:bg-[#D9D9D9] rounded-circle d-grid justify-content-center align-content-center tw:max-w-max m-auto">
           <img
@@ -53,6 +54,7 @@ const Header = ({isToggled,setIsToggled}) => {
         </div>
       </div>
     </div>
+    </header>
   );
 };
 
