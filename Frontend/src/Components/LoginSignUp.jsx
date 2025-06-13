@@ -5,6 +5,7 @@ import { FaLock, FaEnvelope } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google';
 
+
 const LoginSignUp = ({ setShowNavbar,setShowHeader,setShowFooter }) => {
   const [isLogin, setIsLogin] = useState(true);
   const [isTablet, setIsTablet] = useState(false);
