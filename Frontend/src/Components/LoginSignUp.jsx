@@ -94,20 +94,23 @@ const LoginSignUp = ({ setShowNavbar,setShowHeader,setShowFooter }) => {
                         </button>
                       </div>
                     </div>
-                    <div className="form-group mt-3">
+                    <div className="form-group mt-2">
+                      <p className="text-center">
+                      <Link to={"/forgotpassword"} className="tw:text-green-600"> Forgot Password?</Link>
+                    </p>
                       <p className="text-center">
                         Don't have an account?{" "}
                         <span
-                          className="tw:cursor-pointer tw:text-blue-600 text-decoration-underline"
+                          className="tw:cursor-pointer tw:text-green-600 text-decoration-underline"
                           onClick={handleToggle}
                         >
                           Sign Up
                         </span>
                         <Link
                           to="/home"
-                          className="tw:cursor-pointer tw:text-blue-600 text-decoration-underline"
+                          className="tw:cursor-pointer tw:text-green-600 text-decoration-underline"
                         >
-                          <p className="tw:cursor-pointer tw:text-blue-600 text-decoration-underline">
+                          <p className="tw:cursor-pointer tw:text-green-600 text-decoration-underline">
                             Or Continue as Guest
                           </p>
                         </Link>
@@ -165,7 +168,7 @@ const LoginSignUp = ({ setShowNavbar,setShowHeader,setShowFooter }) => {
                       <p className="text-center">
                         Already Have an Account?{" "}
                         <span
-                          className="tw:cursor-pointer tw:text-blue-600 text-decoration-underline"
+                          className="tw:cursor-pointer tw:text-green-600 text-decoration-underline"
                           onClick={handleToggle}
                         >
                           Login
@@ -216,21 +219,21 @@ const LoginSignUp = ({ setShowNavbar,setShowHeader,setShowFooter }) => {
                   </div>
                   <div className="form-group mt-3">
                     <p className="text-center">
-                      <Link to={"/forgotpassword"} > Forgot Password?</Link>
+                      <Link to={"/forgotpassword"} className="tw:text-green-600"> Forgot Password?</Link>
                     </p>
                     <p className="text-center">
                       Don't have an account?{" "}
                       <span
-                        className="tw:cursor-pointer tw:text-blue-600 text-decoration-underline"
+                        className="tw:cursor-pointer tw:text-green-600 text-decoration-underline"
                         onClick={handleToggle}
                       >
                         Sign Up
                       </span>
                       <Link
                         to="/home"
-                        className="tw:cursor-pointer tw:text-blue-600 text-decoration-underline"
+                        className="tw:cursor-pointer tw:text-green-600 text-decoration-underline"
                       >
-                        <p className="tw:cursor-pointer tw:text-blue-600 text-decoration-underline">
+                        <p className="tw:cursor-pointer tw:text-green-600 text-decoration-underline">
                           Or Continue as Guest
                         </p>
                       </Link>
