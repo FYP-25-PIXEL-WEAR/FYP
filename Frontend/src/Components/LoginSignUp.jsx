@@ -202,7 +202,7 @@ const LoginSignUp = ({ setShowNavbar,setShowHeader,setShowFooter }) => {
                       />
                       <FaLock className="position-absolute tw:end-0 top-0" />
                     </div>
-                    <div className="mb-5 text-start">
+                    <div className="mb-2 text-start">
                       <button
                         type="submit"
                         className="btn btn-dark tw:w-50 rounded-5 m-0 rounded-end-0"
@@ -215,6 +215,9 @@ const LoginSignUp = ({ setShowNavbar,setShowHeader,setShowFooter }) => {
                     </div>
                   </div>
                   <div className="form-group mt-3">
+                    <p className="text-center">
+                      <Link to={"/forgotpassword"} > Forgot Password?</Link>
+                    </p>
                     <p className="text-center">
                       Don't have an account?{" "}
                       <span
@@ -269,7 +272,7 @@ const LoginSignUp = ({ setShowNavbar,setShowHeader,setShowFooter }) => {
                       />
                       <FaLock className="position-absolute tw:end-0 top-0" />
                     </div>
-                    <div className="mb-5 text-start">
+                    <div className="mb-2 text-start">
                       <button
                         type="submit"
                         className="btn btn-dark tw:w-50 rounded-5 m-0 rounded-end-0"
