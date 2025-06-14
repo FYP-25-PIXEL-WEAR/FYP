@@ -8,26 +8,31 @@ import axios from "axios";
 
 const LoginSignUp = ({ setShowNavbar, setShowHeader, setShowFooter }) => {
   const [isLogin, setIsLogin] = useState(true);
-  const [isSignUp, setIsSignUp] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [showToast, setShowToast] = useState(false);
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-
+  const [errmsg, setErrmsg] = useState("");
   useEffect(() => {
     // Initialize Bootstrap toast
-    const toastEl = document.getElementById('signupToast');
+    const toastEl = document.getElementById("signupToast");
     if (toastEl) {
       const toast = new bootstrap.Toast(toastEl, {
         autohide: true,
-        delay: 3000
+        delay: 3000,
       });
-      
+
       if (showToast) {
         toast.show();
       }
+    }
+    if (showToast) {
+      const timeout = setTimeout(() => {
+        setShowToast(false);
+      }, 3000);
+      return () => clearTimeout(timeout);
     }
   }, [showToast]);
 
@@ -38,6 +43,8 @@ const LoginSignUp = ({ setShowNavbar, setShowHeader, setShowFooter }) => {
       .then((response) => {
         if (response.data.success) {
           navigate("/home");
+        } else {
+          setErrmsg("Invalid username or password");
         }
       })
       .catch((error) => {
@@ -103,6 +110,24 @@ const LoginSignUp = ({ setShowNavbar, setShowHeader, setShowFooter }) => {
   return (
     <div className="container d-flex justify-content-center align-items-center tw:mt-24">
       <div className="col-md-9 m-auto shadow-lg p-5 mt-5 rounded-3 tw:h-[500px] overflow-hidden tw:relative">
+        <div
+          className="toast align-items-center text-bg-success border-0 position-fixed top-0 end-0 m-3"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+          id="signupToast"
+        >
+          <div className="d-flex">
+            <div className="toast-body">Signup successful!</div>
+            <button
+              type="button"
+              className="btn-close btn-close-white me-2 m-auto"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+              onClick={() => setShowToast(false)}
+            ></button>
+          </div>
+        </div>
         <div className="position-relative d-flex flex-md-row justify-content-between align-items-center">
           {isTablet ? (
             <div className="tw:w-full tw:overflow-hidden">
@@ -142,6 +167,7 @@ const LoginSignUp = ({ setShowNavbar, setShowHeader, setShowFooter }) => {
                           required
                         />
                         <FaLock className="position-absolute tw:end-0 top-0" />
+                        {errmsg && <p className="text-danger">{errmsg}</p>}
                       </div>
                       <div className="mb-5 text-start">
                         <button
@@ -193,6 +219,7 @@ const LoginSignUp = ({ setShowNavbar, setShowHeader, setShowFooter }) => {
                     <h2 className="border-bottom w-max p-2 text-center w-25 m-auto">
                       SignUp
                     </h2>
+
                     <div className="box tw:w-max m-auto">
                       <div className="form-group mb-5 mt-5 position-relative">
                         <input
@@ -289,6 +316,7 @@ const LoginSignUp = ({ setShowNavbar, setShowHeader, setShowFooter }) => {
                         required
                       />
                       <FaLock className="position-absolute tw:end-0 top-0" />
+                      {errmsg && <p className="text-danger">{errmsg}</p>}
                     </div>
                     <div className="mb-2 text-start">
                       <button
@@ -337,24 +365,6 @@ const LoginSignUp = ({ setShowNavbar, setShowHeader, setShowFooter }) => {
               </div>
               <div className="col-md-6 m-auto">
                 <form className="w-100 text-center" onSubmit={handleSignUp}>
-                  <div
-                    className="toast align-items-center text-bg-primary border-0 position-fixed top-0 end-0 m-3"
-                    role="alert"
-                    aria-live="assertive"
-                    aria-atomic="true"
-                    id="signupToast"
-                  >
-                    <div className="d-flex">
-                      <div className="toast-body">Signup successful!</div>
-                      <button
-                        type="button"
-                        className="btn-close btn-close-white me-2 m-auto"
-                        data-bs-dismiss="toast"
-                        aria-label="Close"
-                        onClick={() => setShowToast(false)}
-                      ></button>
-                    </div>
-                  </div>
                   <h2 className="border-bottom w-max p-2 text-center w-25 m-auto">
                     SignUp
                   </h2>
