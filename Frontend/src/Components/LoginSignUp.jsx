@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import { MdOutlineMan } from "react-icons/md";
 import { FcGoogle } from "react-icons/fc";
 import { FaLock, FaEnvelope } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
 import { GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google';
+import axios from "axios";
 
 
 const LoginSignUp = ({ setShowNavbar,setShowHeader,setShowFooter }) => {
@@ -59,7 +60,7 @@ const LoginSignUp = ({ setShowNavbar,setShowHeader,setShowFooter }) => {
                 style={{ transform: isLogin ? "translateX(0)" : "translateX(-50%)" }}
               >
                 <div className="tw:w-1/2">
-                  <form className="text-center position-relative">
+                  <form className="text-center position-relative" onSubmit={handleLogin}>
                     <h2 className="border-bottom w-25 m-auto p-2 text-center">Login</h2>
                     <div className="box tw:w-max m-auto">
                       <div className="form-group mb-5 mt-5 position-relative">
@@ -119,7 +120,7 @@ const LoginSignUp = ({ setShowNavbar,setShowHeader,setShowFooter }) => {
                   </form>
                 </div>
                 <div className="tw:w-1/2">
-                  <form className="w-100 text-center">
+                  <form className="w-100 text-center" onSubmit={handleSignUp}>
                     <h2 className="border-bottom w-max p-2 text-center w-25 m-auto">SignUp</h2>
                     <div className="box tw:w-max m-auto">
                       <div className="form-group mb-5 mt-5 position-relative">
@@ -182,7 +183,7 @@ const LoginSignUp = ({ setShowNavbar,setShowHeader,setShowFooter }) => {
           ) : (
             <>
               <div className="col-md-6 m-auto">
-                <form className="text-center position-relative">
+                <form className="text-center position-relative" onSubmit={handleLogin}>
                   <h2 className="border-bottom w-25 m-auto p-2 text-center">Login</h2>
                   <div className="box tw:w-max m-auto">
                     <div className="form-group mb-5 mt-5 position-relative">
@@ -242,7 +243,7 @@ const LoginSignUp = ({ setShowNavbar,setShowHeader,setShowFooter }) => {
                 </form>
               </div>
               <div className="col-md-6 m-auto">
-                <form className="w-100 text-center">
+                <form className="w-100 text-center" onSubmit={handleSignUp}>
                   <h2 className="border-bottom w-max p-2 text-center w-25 m-auto">SignUp</h2>
                   <div className="box tw:w-max m-auto">
                     <div className="form-group mb-5 mt-5 position-relative">
